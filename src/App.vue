@@ -1,6 +1,9 @@
 <script setup>
 import { ref } from 'vue'
-import VSlideXTransition from './components/VSlideXTransition.vue'
+// import VTransitionFade from './components/VTransitionFade.vue'
+// import VTransitionScale from './components/VTransitionScale.vue'
+// import VTransitionSlideX from './components/VTransitionSlideX.vue'
+import VTransitionSlideY from './components/VTransitionSlideY.vue'
 
 const show = ref(true)
 </script>
@@ -13,14 +16,14 @@ const show = ref(true)
         </button>
 
         <div class="min-h-[150px]">
-          <v-slide-x-transition>
+          <VTransitionSlideY>
             <ul v-if="show" class="w-[150px] rounded border p-4 text-left shadow">
               <li>Item 1</li>
               <li>Item 2</li>
               <li>Item 3</li>
               <li>Item 4</li>
             </ul>
-          </v-slide-x-transition>
+          </VTransitionSlideY>
         </div>
       </div>
     </div>
